@@ -1,13 +1,4 @@
-<?php
-$num= isset($_GET['num'])?$_GET['num']:0;
-$multi;
-$cont=1;
-while ($cont <= 10) {
-  $multi = $num * $cont;
-  echo "$num X $cont = <b>" . $multi . "</b></br>";
-    $cont++;
-  }
- ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -42,6 +33,22 @@ h1{
         ?>
         </select>
         <button class="botao" type=submit>Gerar</button>
+        <br>
+        <br>
+        <?php
+        if($_GET){
+        $num= isset($_GET['num'])?$_GET['num']:0;
+        $multi;
+        $cont=1;
+        while ($cont <= 10) {
+          $multi = $num * $cont;
+          echo "$num X $cont = <b>" . $multi . "</b></br>";
+            $cont++;
+          }
+        }else{
+          echo "valores nao setados";
+        }
+         ?>
       </fieldset>
     </form>
 
